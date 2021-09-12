@@ -1,0 +1,11 @@
+.socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    &:nth-child(2) {
+      margin: 0 10px;
+    }
+  }
+}
