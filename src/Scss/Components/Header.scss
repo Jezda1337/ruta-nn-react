@@ -49,6 +49,10 @@
     margin-left: 5px;
     color: Global.$darkBlue;
     font-weight: 500;
+
+    @include Global.breakpoint(tablet) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -104,6 +108,13 @@
     font-weight: 500;
     color: Global.$darkBlue;
     font-size: 24px;
+
+    @include Global.breakpoint(desktop) {
+      transition: color 0.3s linear;
+      &:hover {
+        color: Global.$white;
+      }
+    }
   }
 }
 

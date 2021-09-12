@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Logo.svg";
 import SocialMedia from "./SocialMedia";
 import "../Scss/Components/Header.scss";
 
-import { FiMail, FiPhone } from "react-icons/fi";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Header = (props) => {
   const [isActive, setActive] = useState(false);
-  const width = window.innerWidth;
+  const [width, setWidth] = useState(0);
+
   function handleActive(e) {
     setActive(!isActive);
   }
+
+  useEffect(() => {
+    (function handleResize() {
+      setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    })();
+  });
 
   return (
     <>
@@ -20,12 +28,12 @@ const Header = (props) => {
           <div className="wrapper">
             <section className="header__contact-body">
               <figure className="header__contact-info">
-                <FiPhone size={24} />
+                <FaPhoneAlt fill="#0a1931" size={24} />
                 <span className="header__contact-text">+381 65 541 84 76</span>
               </figure>
 
               <figure className="header__contact-info">
-                <FiMail size={24} />
+                <FaEnvelope fill="#0a1931" size={24} />
                 <span className="header__contact-text">rutann@info.rs</span>
               </figure>
 
@@ -72,12 +80,12 @@ const Header = (props) => {
               <ul className="nav__list">
                 <li className="nav__item">
                   <Link className="nav__link" to="/">
-                    Home
+                    pocetna
                   </Link>
                 </li>
                 <li className="nav__item">
                   <Link className="nav__link" to="/about">
-                    About
+                    o nama
                   </Link>
                 </li>
               </ul>
