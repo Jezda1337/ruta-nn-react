@@ -3,7 +3,12 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import SideNavigation from "./Components/SideNavigation";
+import Footer from "./Components/Footer";
+
 import { useState } from "react";
+
+import "./Scss/App.scss";
+
 const App = () => {
   const [isOpen, setOpen] = useState(false);
   function handleSideNav() {
@@ -22,7 +27,7 @@ const App = () => {
         <SideNavigation show={isOpen} />
         <main>
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
             <Route path="/about">
@@ -31,6 +36,7 @@ const App = () => {
           </Switch>
         </main>
       </Router>
+      <Footer color="white" />
     </>
   );
 };

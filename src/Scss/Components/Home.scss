@@ -1,27 +1,79 @@
 @use '../Global';
 
 .home {
-  padding: 30px 0;
-  background: url("") center / cover no-repeat;
+  height: 100%;
+  padding: 40px 0 0;
+  background: url("../../Assets/home.webp") center / cover no-repeat;
+
+  @include Global.breakpoint(tablet) {
+    padding: 80px 0 0;
+  }
   &__body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
+
+    @include Global.breakpoint(tablet) {
+      max-width: 450px;
+      margin: 0 auto;
+    }
   }
 
   &__logo {
     max-width: 80px;
     width: 100%;
+    @include Global.breakpoint(tablet) {
+      max-width: 140px;
+    }
   }
 
   &__title {
     font-size: 60px;
-    font-weight: bolder;
-    color: Global.$darkBlue;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: Global.$white;
+
+    @include Global.breakpoint(tablet) {
+      font-size: 96px;
+    }
   }
 
   &__text {
+    color: Global.$white;
+    margin: 25px 0;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    line-height: 144.7%;
+    @include Global.breakpoint(tablet) {
+      margin: 24px 0 66px;
+      font-size: 18px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include Global.breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    max-width: 200px;
+    color: Global.$white;
+
+    &:first-child {
+      margin-bottom: 25px;
+
+      @include Global.breakpoint(tablet) {
+        margin: 0;
+      }
+    }
   }
 }

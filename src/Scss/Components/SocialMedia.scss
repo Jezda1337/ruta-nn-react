@@ -1,9 +1,15 @@
+@use '../Global';
+
 .socialMedia {
   display: flex;
   align-items: center;
   justify-content: center;
 
+  @include Global.breakpoint(tablet) {
+    margin-left: auto;
+  }
   &__item {
+    max-height: 24px;
     &:nth-child(2) {
       margin: 0 10px;
     }

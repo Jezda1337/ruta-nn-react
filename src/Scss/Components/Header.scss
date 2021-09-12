@@ -1,21 +1,47 @@
 @use '../Global';
 
 .header {
-  box-shadow: 0px 1px 5px #000;
+  box-shadow: 0px 1px 5px Global.$darkBlue;
 
   &__contact {
     max-height: 35px;
     height: 100%;
     padding: 6px 0;
+
+    @include Global.breakpoint(tablet) {
+      max-height: 45px;
+    }
   }
   &__contact-body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include Global.breakpoint(tablet) {
+      justify-content: flex-start;
+    }
   }
   &__contact-info {
     display: flex;
     align-items: center;
+
+    @include Global.breakpoint(tablet) {
+      &:first-child {
+        margin-right: 30px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: -18px;
+          color: Global.$main;
+          width: 1.5px;
+          height: 20px;
+          border-radius: 100px;
+          background-color: Global.$main;
+        }
+      }
+    }
   }
 
   &__contact-text {
@@ -28,9 +54,15 @@
 
 .nav {
   background-color: Global.$main;
+  max-height: 65px;
+  padding: 2.5px 0;
   &__logo {
     max-width: 48px;
     width: 100%;
+
+    @include Global.breakpoint(tablet) {
+      max-width: 60px;
+    }
 
     &-link {
       display: block;
@@ -49,10 +81,29 @@
     width: 100%;
     max-height: 50px;
     height: 100%;
+
+    @include Global.breakpoint(tablet) {
+      display: none;
+    }
   }
   &__list {
     display: none;
     justify-content: space-between;
+    @include Global.breakpoint(tablet) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    color: Global.$darkBlue;
+    font-size: 24px;
   }
 }
 

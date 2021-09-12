@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Logo.svg";
-
+import SocialMedia from "./SocialMedia";
 import "../Scss/Components/Header.scss";
 
 import { FiMail, FiPhone } from "react-icons/fi";
 
 const Header = (props) => {
   const [isActive, setActive] = useState(false);
+  const width = window.innerWidth;
   function handleActive(e) {
     setActive(!isActive);
   }
+
   return (
     <>
       <header className="header">
@@ -26,6 +28,8 @@ const Header = (props) => {
                 <FiMail size={24} />
                 <span className="header__contact-text">rutann@info.rs</span>
               </figure>
+
+              {width >= 768 ? <SocialMedia /> : ""}
             </section>
           </div>
         </section>
@@ -34,7 +38,7 @@ const Header = (props) => {
             <section className="nav__body">
               <div className="nav__logo">
                 <Link className="nav__logo-link" to="/">
-                  <img src={Logo} width="48" alt="brend logo" />
+                  <img src={Logo} width="48" height="48" alt="brend logo" />
                 </Link>
               </div>
 
@@ -43,6 +47,7 @@ const Header = (props) => {
                   handleActive();
                   props.click();
                 }}
+                aria-label="open/close mobile menu"
                 className="nav__toggle-btn"
               >
                 <svg

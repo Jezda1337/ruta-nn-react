@@ -6,8 +6,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  transition: background 0.5s ease;
+  transition: z-index 0.5s step-end, background 0.5s linear;
   overflow: hidden;
+  z-index: -1;
 
   &__list {
     background-color: Global.$white;
@@ -22,6 +23,8 @@
   &__item {
     padding: 10px;
     text-align: center;
+    display: grid;
+    place-items: center;
 
     &:last-child {
       border-top: 1.5px solid Global.$main;
@@ -38,6 +41,7 @@
   &__btn {
     display: block;
     font-size: 24px;
+    max-width: 200px;
     width: 100%;
     padding: 5.5px 0;
     border-radius: 100px;
@@ -54,5 +58,7 @@
 }
 
 .openNav {
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: z-index 0.5s step-start, background 0.5s linear;
 }
