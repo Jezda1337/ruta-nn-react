@@ -1,0 +1,22 @@
+@use '../Global';
+
+.slider {
+  overflow: hidden;
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  @include Global.breakpoint(tablet) {
+    max-height: 600px;
+  }
+  &__list {
+    display: flex;
+    position: relative;
+    transition: left 0.4s ease;
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+}

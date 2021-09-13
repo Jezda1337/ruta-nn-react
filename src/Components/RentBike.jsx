@@ -1,27 +1,32 @@
-import { useState, useEffect } from "react";
-import { SliderData } from "./SliderData";
+import Slider from "./Slider";
 import "../Scss/Components/RentBike.scss";
 
 const RentBike = () => {
-  const [counter, setCounter] = useState(0);
-  const length = SliderData.length;
-  function nextSlide() {
-    setCounter(counter === length - 1 ? 0 : counter + 1);
-  }
-
-  useEffect(() => {
-    setTimeout(nextSlide, 3000);
-  });
-
   return (
     <>
-      <section className="slider">
-        <ul className="slider__list">
-          {SliderData.map((slide) => {
-            return <img src={slide.image} alt={slide.alt} key={slide.id} />;
-          })}
-          {/* <img src={SliderData[counter].image} /> */}
-        </ul>
+      <section className="rent">
+        <Slider />
+        <div className="wrapper">
+          <section className="rent__body">
+            <h2 className="rent__title">Rentiraj biciklu kod nas.</h2>
+            <p className="rent__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dicta
+              aut nam eos distinctio, iste dolorem molestiae, consequuntur sed
+              deleniti illo voluptatem natus! Minima omnis recusandae eveniet
+              repellendus, qui asperiores iste necessitatibus dolor error eos
+              repellat corrupti animi suscipit facilis maxime cumque? Enim
+              pariatur totam inventore error reiciendis porro impedit.
+            </p>
+            <p className="rent__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dicta
+              aut nam eos distinctio, iste dolorem molestiae, consequuntur sed
+              deleniti illo voluptatem natus! Minima omnis recusandae eveniet
+              repellendus, qui asperiores iste necessitatibus dolor error eos
+              repellat corrupti animi suscipit facilis maxime cumque? Enim
+              pariatur totam inventore error reiciendis porro impedit.
+            </p>
+          </section>
+        </div>
       </section>
     </>
   );

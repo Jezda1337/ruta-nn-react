@@ -14,11 +14,7 @@ const Form = () => {
             <form className="form__fields">
               <InputField type="text" placeholder="Puno ime i prezime" />
               <InputField type="email" placeholder="Email adresa" />
-              <InputField
-                type="tel"
-                placeholder="Broj mobilnog telefona"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-              />
+              <InputField type="tel" placeholder="Broj mobilnog telefona" />
               <InputField
                 tpye="text"
                 placeholder="U kom gradu zelite da radite"

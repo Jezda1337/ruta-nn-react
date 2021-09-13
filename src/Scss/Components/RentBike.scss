@@ -1,8 +1,37 @@
 @use '../Global';
 
-.slider {
-  overflow: hidden;
-  &__list {
-    display: flex;
+.rent {
+  &__body {
+    margin: 25px 0;
+
+    @include Global.breakpoint(tablet) {
+      margin: 50px 0;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+
+    @include Global.breakpoint(tablet) {
+      font-size: 36px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 25px;
+
+    @include Global.breakpoint(tablet) {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    &:nth-child(2) {
+      margin: 25px 0;
+
+      @include Global.breakpoint(tablet) {
+        margin: 35px 0;
+      }
+    }
   }
 }
