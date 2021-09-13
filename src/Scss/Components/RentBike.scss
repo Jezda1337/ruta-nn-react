@@ -1,0 +1,8 @@
+@use '../Global';
+
+.slider {
+  overflow: hidden;
+  &__list {
+    display: flex;
+  }
+}

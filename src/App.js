@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SideNavigation from "./Components/SideNavigation";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
-import SideNavigation from "./Components/SideNavigation";
+import Form from "./Components/Form";
+import RentBike from "./Components/RentBike";
 import Footer from "./Components/Footer";
 
 import { useState } from "react";
@@ -32,6 +34,12 @@ const App = () => {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/form">
+              <Form />
+            </Route>
+            <Route path="/rent">
+              <RentBike />
             </Route>
           </Switch>
         </main>
