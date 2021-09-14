@@ -1,4 +1,4 @@
-@use '../Global';
+@use '../Global' as *;
 .sideNav {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
@@ -11,43 +11,43 @@
   z-index: -1;
 
   &__list {
-    background-color: Global.$white;
+    background-color: $white;
     height: 100%;
     width: 80%;
-    padding: 30px 20px;
+    padding: rem(30) rem(20);
     position: relative;
     right: -80%;
     transition: right 0.5s ease;
   }
 
   &__item {
-    padding: 10px;
+    padding: rem(10);
     text-align: center;
     display: grid;
     place-items: center;
 
     &:last-child {
-      border-top: 1.5px solid Global.$main;
-      padding-top: 20px;
-      margin-top: 50px;
+      border-top: rem(1.5) solid $main;
+      padding-top: rem(20);
+      margin-top: rem(50);
     }
   }
 
   &__link {
-    color: Global.$darkBlue;
-    font-size: 36px;
+    color: $darkBlue;
+    font-size: rem(36);
   }
 
   &__btn {
     display: block;
-    font-size: 24px;
-    max-width: 200px;
+    font-size: rem(24);
+    max-width: rem(200);
     width: 100%;
-    padding: 5.5px 0;
-    border-radius: 100px;
-    border: 1px solid Global.$main;
+    padding: rem(5.5) 0;
+    border-radius: rem(100);
+    border: rem(1) solid $main;
     background-color: transparent;
-    color: Global.$darkBlue;
+    color: $darkBlue;
     text-align: center;
     font-weight: bold;
   }

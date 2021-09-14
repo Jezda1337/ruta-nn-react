@@ -1,17 +1,17 @@
-@use '../Global';
+@use '../Global' as *;
 
 .socialMedia {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @include Global.breakpoint(tablet) {
+  @include breakpoint(tablet) {
     margin-left: auto;
   }
   &__item {
-    max-height: 24px;
+    max-height: rem(24);
     &:nth-child(2) {
-      margin: 0 10px;
+      margin: 0 rem(10);
     }
   }
 }

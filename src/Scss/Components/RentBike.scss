@@ -1,36 +1,36 @@
-@use '../Global';
+@use '../Global' as *;
 
 .rent {
   &__body {
-    margin: 25px 0;
+    margin: rem(25) 0;
 
-    @include Global.breakpoint(tablet) {
-      margin: 50px 0;
+    @include breakpoint(tablet) {
+      margin: rem(50) 0;
     }
   }
   &__title {
-    font-size: 18px;
+    font-size: rem(18);
     font-weight: 600;
 
-    @include Global.breakpoint(tablet) {
-      font-size: 36px;
+    @include breakpoint(tablet) {
+      font-size: rem(36);
     }
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 25px;
+    font-size: rem(14);
+    line-height: rem(25);
 
-    @include Global.breakpoint(tablet) {
-      font-size: 16px;
-      line-height: 30px;
+    @include breakpoint(tablet) {
+      font-size: rem(16);
+      line-height: rem(30);
     }
 
     &:nth-child(2) {
-      margin: 25px 0;
+      margin: rem(25) 0;
 
-      @include Global.breakpoint(tablet) {
-        margin: 35px 0;
+      @include breakpoint(tablet) {
+        margin: rem(35) 0;
       }
     }
   }

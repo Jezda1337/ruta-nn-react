@@ -1,4 +1,4 @@
-@use '../Global';
+@use '../Global' as *;
 
 .input-wrapper {
   width: 100%;
@@ -6,25 +6,25 @@
 
   &__input {
     width: 100%;
-    padding: 6.5px 10px;
-    border-radius: 100px;
-    border: 1px solid Global.$main;
-    font-size: 16px;
+    padding: rem(6.5) rem(10);
+    border-radius: rem(100);
+    border: rem(1) solid $main;
+    font-size: rem(16);
     font-weight: 500;
-    color: Global.$darkBlue;
-    margin-bottom: 15px;
+    color: $darkBlue;
+    margin-bottom: rem(15);
     outline: none;
     transition: background 0.3s ease-in-out;
 
     &:focus {
-      background-color: Global.$main;
+      background-color: $main;
       color: white;
     }
 
-    @include Global.breakpoint(tablet) {
-      padding: 10px;
-      font-size: 18px;
-      margin-bottom: 20px;
+    @include breakpoint(tablet) {
+      padding: rem(10);
+      font-size: rem(18);
+      margin-bottom: rem(20);
     }
   }
 }

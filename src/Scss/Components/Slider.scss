@@ -1,14 +1,14 @@
-@use '../Global';
+@use '../Global' as *;
 
 .slider {
   overflow: hidden;
-  max-width: 1920px;
+  max-width: rem(1920);
   width: 100%;
   height: auto;
   margin: 0 auto;
 
-  @include Global.breakpoint(tablet) {
-    max-height: 600px;
+  @include breakpoint(tablet) {
+    max-height: rem(600);
   }
   &__list {
     display: flex;

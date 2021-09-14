@@ -1,4 +1,4 @@
-@use './Global';
+@use './Global' as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
 
@@ -33,29 +33,29 @@ img {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 300px;
+  max-width: rem(300);
   width: 100%;
 
-  @include Global.breakpoint(tablet) {
-    max-width: 700px;
+  @include breakpoint(tablet) {
+    max-width: rem(700);
   }
 }
 
 .btn {
-  font-size: 24px;
+  font-size: rem(24);
   font-weight: 500;
-  letter-spacing: 1px;
-  padding: 5.5px 0;
+  letter-spacing: rem(1);
+  padding: rem(5.5) 0;
   width: 100%;
-  border-radius: 100px;
-  border: 1.5px solid Global.$main;
+  border-radius: rem(100);
+  border: rem(1.5) solid $main;
   background-color: transparent;
   display: block;
   transition: background 0.3s ease-in-out;
 
-  @include Global.breakpoint(tablet) {
+  @include breakpoint(tablet) {
     &:hover {
-      background-color: Global.$main;
+      background-color: $main;
       cursor: pointer;
     }
   }

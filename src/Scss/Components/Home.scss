@@ -1,12 +1,12 @@
-@use '../Global';
+@use '../Global' as *;
 
 .home {
   height: 100vh;
-  padding: 40px 0 0;
+  padding: rem(40) 0 0;
   background: url("../../Assets/home.webp") center / cover no-repeat;
 
-  @include Global.breakpoint(tablet) {
-    padding: 80px 0 0;
+  @include breakpoint(tablet) {
+    padding: rem(80) 0 0;
   }
   &__body {
     display: flex;
@@ -15,40 +15,40 @@
     text-align: center;
     align-items: center;
 
-    @include Global.breakpoint(tablet) {
-      max-width: 450px;
+    @include breakpoint(tablet) {
+      max-width: rem(450);
       margin: 0 auto;
     }
   }
 
   &__logo {
-    max-width: 80px;
+    max-width: rem(80);
     width: 100%;
-    @include Global.breakpoint(tablet) {
-      max-width: 140px;
+    @include breakpoint(tablet) {
+      max-width: rem(140);
     }
   }
 
   &__title {
-    font-size: 60px;
+    font-size: rem(60);
     font-weight: 900;
-    letter-spacing: 1.5px;
-    color: Global.$white;
+    letter-spacing: rem(1.5);
+    color: $white;
 
-    @include Global.breakpoint(tablet) {
-      font-size: 96px;
+    @include breakpoint(tablet) {
+      font-size: rem(96);
     }
   }
 
   &__text {
-    color: Global.$white;
-    margin: 25px 0;
-    font-size: 14px;
-    letter-spacing: 1.5px;
+    color: $white;
+    margin: rem(25) 0;
+    font-size: rem(14);
+    letter-spacing: rem(1.5);
     line-height: 144.7%;
-    @include Global.breakpoint(tablet) {
-      margin: 24px 0 66px;
-      font-size: 18px;
+    @include breakpoint(tablet) {
+      margin: rem(24) 0 rem(66);
+      font-size: rem(18);
     }
   }
 
@@ -58,20 +58,20 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    @include Global.breakpoint(tablet) {
+    @include breakpoint(tablet) {
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
   &__btn {
-    max-width: 200px;
-    color: Global.$white;
+    max-width: rem(200);
+    color: $white;
 
     &:first-child {
-      margin-bottom: 25px;
+      margin-bottom: rem(25);
 
-      @include Global.breakpoint(tablet) {
+      @include breakpoint(tablet) {
         margin: 0;
       }
     }

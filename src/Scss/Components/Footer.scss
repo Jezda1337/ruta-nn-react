@@ -1,7 +1,7 @@
-@use '../Global';
+@use '../Global' as *;
 .footer {
-  padding: 10px;
+  padding: rem(10);
   display: grid;
   place-items: center;
-  background-color: Global.$darkBlue;
+  background-color: $darkBlue;
 }

@@ -1,15 +1,15 @@
-@use '../Global';
+@use '../Global' as *;
 
 .header {
-  box-shadow: 0px 1px 5px Global.$darkBlue;
+  box-shadow: 0 rem(1) rem(5) $darkBlue;
 
   &__contact {
-    max-height: 35px;
+    max-height: rem(35);
     height: 100%;
-    padding: 6px 0;
+    padding: rem(6) 0;
 
-    @include Global.breakpoint(tablet) {
-      max-height: 45px;
+    @include breakpoint(tablet) {
+      max-height: rem(45);
     }
   }
   &__contact-body {
@@ -17,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include Global.breakpoint(tablet) {
+    @include breakpoint(tablet) {
       justify-content: flex-start;
     }
   }
@@ -25,47 +25,47 @@
     display: flex;
     align-items: center;
 
-    @include Global.breakpoint(tablet) {
+    @include breakpoint(tablet) {
       &:first-child {
-        margin-right: 30px;
+        margin-right: rem(30);
         position: relative;
 
         &::before {
           content: "";
           position: absolute;
-          right: -18px;
-          color: Global.$main;
-          width: 1.5px;
-          height: 20px;
-          border-radius: 100px;
-          background-color: Global.$main;
+          right: rem(-18);
+          color: $main;
+          width: rem(1.5);
+          height: rem(20);
+          border-radius: rem(100);
+          background-color: $main;
         }
       }
     }
   }
 
   &__contact-text {
-    font-size: 12px;
-    margin-left: 5px;
-    color: Global.$darkBlue;
+    font-size: rem(12);
+    margin-left: rem(5);
+    color: $darkBlue;
     font-weight: 500;
 
-    @include Global.breakpoint(tablet) {
-      font-size: 14px;
+    @include breakpoint(tablet) {
+      font-size: rem(14);
     }
   }
 }
 
 .nav {
-  background-color: Global.$main;
-  max-height: 65px;
-  padding: 2.5px 0;
+  background-color: $main;
+  max-height: rem(65);
+  padding: rem(2.5) 0;
   &__logo {
-    max-width: 48px;
+    max-width: rem(48);
     width: 100%;
 
-    @include Global.breakpoint(tablet) {
-      max-width: 60px;
+    @include breakpoint(tablet) {
+      max-width: rem(60);
     }
 
     &-link {
@@ -81,38 +81,38 @@
   &__toggle-btn {
     border: none;
     background-color: transparent;
-    max-width: 50px;
+    max-width: rem(50);
     width: 100%;
-    max-height: 50px;
+    max-height: rem(50);
     height: 100%;
 
-    @include Global.breakpoint(tablet) {
+    @include breakpoint(tablet) {
       display: none;
     }
   }
   &__list {
     display: none;
     justify-content: space-between;
-    @include Global.breakpoint(tablet) {
+    @include breakpoint(tablet) {
       display: flex;
     }
   }
 
   &__item {
     &:first-child {
-      margin-right: 35px;
+      margin-right: rem(35);
     }
   }
 
   &__link {
     font-weight: 500;
-    color: Global.$darkBlue;
-    font-size: 24px;
+    color: $darkBlue;
+    font-size: rem(24);
 
-    @include Global.breakpoint(desktop) {
+    @include breakpoint(desktop) {
       transition: color 0.3s linear;
       &:hover {
-        color: Global.$white;
+        color: $white;
       }
     }
   }
@@ -134,7 +134,7 @@
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: Global.$darkBlue;
+  stroke: $darkBlue;
   stroke-width: 5.5;
   stroke-linecap: round;
 }
