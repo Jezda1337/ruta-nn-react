@@ -1,17 +1,22 @@
 @use './Global' as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+@import "react-multi-carousel/lib/styles.css";
 
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 ul,

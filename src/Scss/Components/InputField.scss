@@ -1,4 +1,4 @@
-@use '../Global' as *;
+@use "../Global" as *;
 
 .input-wrapper {
   width: 100%;
@@ -14,11 +14,12 @@
     color: $darkBlue;
     margin-bottom: rem(15);
     outline: none;
-    transition: background 0.3s ease-in-out;
+    transition: 250ms ease-in-out;
 
     &:focus {
       background-color: $main;
       color: white;
+      transform: scale(1.1);
     }
 
     @include breakpoint(tablet) {

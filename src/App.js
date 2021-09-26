@@ -1,15 +1,16 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SideNavigation from "./Components/SideNavigation";
-import Header from "./Components/Header";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Form from "./Components/Form";
-import RentBike from "./Components/RentBike";
-import Footer from "./Components/Footer";
 
-import { useState } from "react";
+import {
+  SideNavigation,
+  Header,
+  Home,
+  About,
+  Form,
+  RentBike,
+  Footer,
+} from "./Components";
 
-import "./Scss/App.scss";
+import { useState, Suspense } from "react";
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -25,23 +26,25 @@ const App = () => {
   return (
     <>
       <Router>
-        <Header click={handleSideNav} />
+        <Header show={isOpen} click={handleSideNav} />
         <SideNavigation show={isOpen} />
         <main>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/form">
-              <Form />
-            </Route>
-            <Route path="/rent">
-              <RentBike />
-            </Route>
-          </Switch>
+          <Suspense fallback="Loading...">
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/form">
+                <Form />
+              </Route>
+              <Route exact path="/rent">
+                <RentBike />
+              </Route>
+            </Switch>
+          </Suspense>
         </main>
       </Router>
       <Footer color="white" />

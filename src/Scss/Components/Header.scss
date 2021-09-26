@@ -1,4 +1,4 @@
-@use '../Global' as *;
+@use "../Global" as *;
 
 .header {
   box-shadow: 0 rem(1) rem(5) $darkBlue;
@@ -95,24 +95,44 @@
     justify-content: space-between;
     @include breakpoint(tablet) {
       display: flex;
+      align-items: center;
     }
   }
 
   &__item {
-    &:first-child {
+    &:not(:last-child) {
       margin-right: rem(35);
+    }
+
+    &:last-child {
+      background-color: $white;
+      padding: rem(3) rem(30);
+      border-radius: rem(100);
+      transition: 250ms ease;
+      &:hover {
+        background-color: rgb(236, 236, 236);
+        transform: scale(1.1);
+      }
     }
   }
 
   &__link {
     font-weight: 500;
     color: $darkBlue;
-    font-size: rem(24);
+    font-size: rem(18);
 
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       transition: color 0.3s linear;
       &:hover {
         color: $white;
+      }
+    }
+
+    &--btn {
+      color: $darkBlue;
+
+      &:hover {
+        color: inherit;
       }
     }
   }

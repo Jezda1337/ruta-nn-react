@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 import "../Scss/Components/SideNavigation.scss";
-import SocialMedia from "./SocialMedia";
+import { SocialMedia } from "../Components";
 
-const SideNavigation = (props) => {
+const SideNavigation = ({ show }) => {
   return (
     <>
-      <nav className={`sideNav ${props.show ? "openNav" : ""}`}>
-        <ul className={`sideNav__list ${props.show ? "open" : ""}`}>
+      <nav className={`sideNav ${show ? "openNav" : ""}`}>
+        <ul className={`sideNav__list ${show ? "open" : ""}`}>
           <li className="sideNav__item">
             <Link className="sideNav__link" to="/">
               pocetna
@@ -17,6 +17,12 @@ const SideNavigation = (props) => {
           <li className="sideNav__item">
             <Link className="sideNav__link" to="/about">
               o nama
+            </Link>
+          </li>
+
+          <li className="sideNav__item">
+            <Link className="sideNav__link" to="/rent">
+              rent a bike
             </Link>
           </li>
 

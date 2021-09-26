@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../Assets/Logo.svg";
-import SocialMedia from "./SocialMedia";
+import Logo from "../Assets/Asset 1.svg";
+import { SocialMedia } from "../Components";
 import "../Scss/Components/Header.scss";
 
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-const Header = (props) => {
+const Header = ({ click }) => {
   const [isActive, setActive] = useState(false);
   const [width, setWidth] = useState(0);
 
-  function handleActive(e) {
+  function handleActive() {
     setActive(!isActive);
   }
 
@@ -53,7 +53,7 @@ const Header = (props) => {
               <button
                 onClick={() => {
                   handleActive();
-                  props.click();
+                  click();
                 }}
                 aria-label="open/close mobile menu"
                 className="nav__toggle-btn"
@@ -86,6 +86,18 @@ const Header = (props) => {
                 <li className="nav__item">
                   <Link className="nav__link" to="/about">
                     o nama
+                  </Link>
+                </li>
+
+                <li className="nav__item">
+                  <Link className="nav__link" to="/rent">
+                    rent a bike
+                  </Link>
+                </li>
+
+                <li className="nav__item">
+                  <Link className="nav__link nav__link--btn" to="/form">
+                    konkurisi
                   </Link>
                 </li>
               </ul>

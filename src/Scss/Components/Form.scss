@@ -1,7 +1,8 @@
-@use '../Global' as *;
+@use "../Global" as *;
 
 .form {
-  height: 100vh;
+  height: 100%;
+  padding: 0 0 rem(40);
 
   &__body {
     max-width: rem(450);

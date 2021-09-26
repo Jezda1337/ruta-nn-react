@@ -1,12 +1,12 @@
-@use '../Global' as *;
+@use "../Global" as *;
 
 .home {
-  height: 100vh;
-  padding: rem(40) 0 0;
+  height: 100%;
+  padding: rem(40)  0;
   background: url("../../Assets/home.webp") center / cover no-repeat;
 
   @include breakpoint(tablet) {
-    padding: rem(80) 0 0;
+    padding: rem(80)  0;
   }
   &__body {
     display: flex;
