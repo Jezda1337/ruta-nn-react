@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Asset 1.svg";
 import { SocialMedia } from "../Components";
-import "../Scss/Components/Header.scss";
+// import "../Scss/Components/Header.scss";
 
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
@@ -29,12 +29,18 @@ const Header = ({ click }) => {
             <section className="header__contact-body">
               <figure className="header__contact-info">
                 <FaPhoneAlt fill="#0a1931" size={24} />
-                <span className="header__contact-text">+381 65 541 84 76</span>
+                <a href="tel:+381695230188">
+                  <span className="header__contact-text">+381 695 230 188</span>
+                </a>
               </figure>
 
               <figure className="header__contact-info">
                 <FaEnvelope fill="#0a1931" size={24} />
-                <span className="header__contact-text">rutann@info.rs</span>
+                <a href="mailto:rutanndelivery@gmail.com" rel="noreferrer">
+                  <span className="header__contact-text">
+                    rutanndelivery@gmail.com
+                  </span>
+                </a>
               </figure>
 
               {width >= 768 ? <SocialMedia /> : ""}

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "../Scss/Components/SideNavigation.scss";
+// import "../Scss/Components/SideNavigation.scss";
 import { SocialMedia } from "../Components";
 
 const SideNavigation = ({ show }) => {

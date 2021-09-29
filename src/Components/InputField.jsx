@@ -1,4 +1,4 @@
-import "../Scss/Components/InputField.scss";
+// import "../Scss/Components/InputField.scss";
 
 const InputField = (props) => {
   return (

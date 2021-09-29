@@ -1,18 +1,18 @@
-@use '../Global' as *;
+@use "../Global" as *;
 .sideNav {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
-  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   transition: z-index 0.5s step-end, background 0.5s linear;
   overflow: hidden;
   z-index: -1;
+  inset: 0;
+  top: 90px;
 
   &__list {
     background-color: $white;
-    height: 100%;
     width: 80%;
     padding: rem(30) rem(20);
     position: relative;

@@ -1,4 +1,4 @@
-import "../Scss/Components/Form.scss";
+// import "../Scss/Components/Form.scss";
 import InputField from "./InputField";
 import axios from "axios";
 import { useState } from "react";
@@ -49,6 +49,10 @@ const Form = () => {
             </h2>
 
             <form onSubmit={handleSubmit} className="form__fields">
+              <p style={{ textAlign: "center", marginBottom: "25px" }}>
+                *Da biste poslali formu, molimo vas popunite sva ponudjena
+                polja.*
+              </p>
               <InputField
                 change={(e) => setUser(e.target.value)}
                 name="full_name"

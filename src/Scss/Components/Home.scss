@@ -1,12 +1,31 @@
-@use "../Global" as *;
+@use "../Global" as glb;
 
 .home {
   height: 100%;
-  padding: rem(40)  0;
-  background: url("../../Assets/home.webp") center / cover no-repeat;
+  padding: glb.rem(40) 0;
+  position: relative;
 
-  @include breakpoint(tablet) {
-    padding: rem(80)  0;
+  &__bg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: glb.$black;
+
+    &-img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: inherit;
+      transition: 550ms linear;
+      opacity: 0;
+      filter: blur(glb.rem(2.5)) brightness(40%);
+    }
+  }
+
+  @include glb.breakpoint(tablet) {
+    padding: rem(80) 0;
   }
   &__body {
     display: flex;
@@ -15,40 +34,40 @@
     text-align: center;
     align-items: center;
 
-    @include breakpoint(tablet) {
-      max-width: rem(450);
+    @include glb.breakpoint(tablet) {
+      max-width: glb.rem(450);
       margin: 0 auto;
     }
   }
 
   &__logo {
-    max-width: rem(80);
+    max-width: glb.rem(80);
     width: 100%;
-    @include breakpoint(tablet) {
-      max-width: rem(140);
+    @include glb.breakpoint(tablet) {
+      max-width: glb.rem(140);
     }
   }
 
   &__title {
-    font-size: rem(60);
+    font-size: glb.rem(60);
     font-weight: 900;
-    letter-spacing: rem(1.5);
-    color: $white;
+    letter-spacing: glb.rem(1.5);
+    color: glb.$white;
 
-    @include breakpoint(tablet) {
-      font-size: rem(96);
+    @include glb.breakpoint(tablet) {
+      font-size: glb.rem(96);
     }
   }
 
   &__text {
-    color: $white;
-    margin: rem(25) 0;
-    font-size: rem(14);
-    letter-spacing: rem(1.5);
+    color: glb.$white;
+    margin: glb.rem(25) 0;
+    font-size: glb.rem(14);
+    letter-spacing: glb.rem(1.5);
     line-height: 144.7%;
-    @include breakpoint(tablet) {
-      margin: rem(24) 0 rem(66);
-      font-size: rem(18);
+    @include glb.breakpoint(tablet) {
+      margin: glb.rem(24) 0 glb.rem(66);
+      font-size: glb.rem(18);
     }
   }
 
@@ -58,20 +77,20 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    @include breakpoint(tablet) {
+    @include glb.breakpoint(tablet) {
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
   &__btn {
-    max-width: rem(200);
-    color: $white;
+    max-width: glb.rem(200);
+    color: glb.$white;
 
     &:first-child {
-      margin-bottom: rem(25);
+      margin-bottom: glb.rem(25);
 
-      @include breakpoint(tablet) {
+      @include glb.breakpoint(tablet) {
         margin: 0;
       }
     }

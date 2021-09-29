@@ -1,7 +1,10 @@
+import React from 'react';
+
 const About = () => {
+
   return (
     <>
-      <h1>About</h1>
+      <h1 style={{ textAlign: 'center', margin: '50px' }}>Stranica je u izradi...</h1>
     </>
   );
 };
