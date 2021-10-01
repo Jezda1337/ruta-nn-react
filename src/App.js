@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState, Suspense, lazy, useEffect } from "react";
+import { useState, Suspense, lazy } from "react";
 
-import './Scss/index.scss';
+import "./Scss/index.scss";
 
 const Header = lazy(() => import("./Components/Header"));
 const Home = lazy(() => import("./Components/Home"));
@@ -23,13 +23,20 @@ const App = () => {
     setOpen(!isOpen);
   }
 
-
   return (
     <>
       <Suspense fallback="Loading...">
         <Router>
-          <Header setOpen={setOpen} show={isOpen} handleToggle={handleSideNav} />
-          <SideNavigation show={isOpen} path={handleSideNav}/>
+          <Header
+            setOpen={setOpen}
+            show={isOpen}
+            handleToggle={handleSideNav}
+          />
+          <SideNavigation
+            setOpen={setOpen}
+            show={isOpen}
+            handleOpen={handleSideNav}
+          />
           <main>
             <Switch>
               <Route exact path="/">

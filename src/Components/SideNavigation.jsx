@@ -1,33 +1,35 @@
 import { Link } from "react-router-dom";
-
-// import "../Scss/Components/SideNavigation.scss";
+import { useClickOutside } from "../hooks/useClickOutside/index";
 import { SocialMedia } from "../Components";
 
-const SideNavigation = ({ show, path }) => {
+const SideNavigation = ({ show, handleOpen, setOpen }) => {
+  const domNode = useClickOutside(() => {
+    setOpen(false);
+  });
   return (
     <>
       <nav className={`sideNav ${show ? "openNav" : ""}`}>
-        <ul className={`sideNav__list ${show ? "open" : ""}`}>
+        <ul ref={domNode} className={`sideNav__list ${show ? "open" : ""}`}>
           <li className="sideNav__item">
-            <Link onClick={path} className="sideNav__link" to="/">
+            <Link onClick={handleOpen} className="sideNav__link" to="/">
               pocetna
             </Link>
           </li>
 
           <li className="sideNav__item">
-            <Link onClick={path} className="sideNav__link" to="/about">
+            <Link onClick={handleOpen} className="sideNav__link" to="/about">
               o nama
             </Link>
           </li>
 
           <li className="sideNav__item">
-            <Link onClick={path} className="sideNav__link" to="/rent">
+            <Link onClick={handleOpen} className="sideNav__link" to="/rent">
               rent a bike
             </Link>
           </li>
 
           <li className="sideNav__item">
-            <Link onClick={path} className="sideNav__btn" to="/form">
+            <Link onClick={handleOpen} className="sideNav__btn" to="/form">
               konkurisi
             </Link>
           </li>
