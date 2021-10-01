@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
-import { useClickOutside } from "../hooks/useClickOutside/index";
+//custom hook for outside click
+// import { useClickOutside } from "../hooks/useClickOutside/index";
 import { SocialMedia } from "../Components";
 
 const SideNavigation = ({ show, handleOpen, setOpen }) => {
-  const domNode = useClickOutside(() => {
-    setOpen(false);
-  });
+  //invoking custom hook
+  // let domNode = useClickOutside(() => (show ? handleOpen() : setOpen(false)));
+
   return (
     <>
       <nav className={`sideNav ${show ? "openNav" : ""}`}>
-        <ul ref={domNode} className={`sideNav__list ${show ? "open" : ""}`}>
+        <ul className={`sideNav__list ${show ? "open" : ""}`}>
           <li className="sideNav__item">
             <Link onClick={handleOpen} className="sideNav__link" to="/">
               pocetna

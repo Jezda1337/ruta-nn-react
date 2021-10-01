@@ -3,6 +3,7 @@ import { useState, Suspense, lazy } from "react";
 
 import "./Scss/index.scss";
 
+import Loader from "./Components/Loader";
 const Header = lazy(() => import("./Components/Header"));
 const Home = lazy(() => import("./Components/Home"));
 const SideNavigation = lazy(() => import("./Components/SideNavigation"));
@@ -20,12 +21,12 @@ const App = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-    setOpen(!isOpen);
+    setOpen((isOpen) => !isOpen);
   }
 
   return (
     <>
-      <Suspense fallback="Loading...">
+      <Suspense fallback={<Loader />}>
         <Router>
           <Header
             setOpen={setOpen}

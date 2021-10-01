@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Logo.svg";
-// import "../Scss/Components/Home.scss";
 
 import { sliderHome } from "./SliderData";
 import { useState, useEffect } from "react";

@@ -6,14 +6,7 @@ import { SocialMedia } from "../Components";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Header = ({ handleToggle, show, setOpen }) => {
-  // const [isActive, setActive] = useState(false);
   const [width, setWidth] = useState(0);
-
-  // function handleActive() {
-  //   setActive(show);
-  // }
-  //funkicaj se pozivala na button elementu
-
 
   useEffect(() => {
     (function handleResize() {
@@ -52,7 +45,11 @@ const Header = ({ handleToggle, show, setOpen }) => {
           <div className="wrapper">
             <section className="nav__body">
               <div className="nav__logo">
-                <Link onClick={()=> setOpen(false)} className="nav__logo-link" to="/">
+                <Link
+                  onClick={() => setOpen(false)}
+                  className="nav__logo-link"
+                  to="/"
+                >
                   <img src={Logo} width="48" height="48" alt="brend logo" />
                 </Link>
               </div>

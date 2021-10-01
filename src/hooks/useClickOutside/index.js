@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 export const useClickOutside = (el) => {
-  const domNode = useRef();
+  const domNode = useRef(null);
   useEffect(() => {
     const handler = (event) => {
       if (!domNode.current.contains(event.target)) {
