@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState, Suspense, lazy } from "react";
+import { useState, Suspense, lazy, useEffect } from "react";
 
 import './Scss/index.scss';
 
@@ -13,6 +13,7 @@ const RentBike = lazy(() => import("./Components/RentBike"));
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
+
   function handleSideNav() {
     if (!isOpen) {
       document.body.style.overflow = "hidden";
@@ -22,12 +23,13 @@ const App = () => {
     setOpen(!isOpen);
   }
 
+
   return (
     <>
       <Suspense fallback="Loading...">
         <Router>
-          <Header show={isOpen} click={handleSideNav} />
-          <SideNavigation show={isOpen} />
+          <Header setOpen={setOpen} show={isOpen} handleToggle={handleSideNav} />
+          <SideNavigation show={isOpen} path={handleSideNav}/>
           <main>
             <Switch>
               <Route exact path="/">

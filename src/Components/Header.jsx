@@ -2,17 +2,18 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Asset 1.svg";
 import { SocialMedia } from "../Components";
-// import "../Scss/Components/Header.scss";
 
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-const Header = ({ click }) => {
-  const [isActive, setActive] = useState(false);
+const Header = ({ handleToggle, show, setOpen }) => {
+  // const [isActive, setActive] = useState(false);
   const [width, setWidth] = useState(0);
 
-  function handleActive() {
-    setActive(!isActive);
-  }
+  // function handleActive() {
+  //   setActive(show);
+  // }
+  //funkicaj se pozivala na button elementu
+
 
   useEffect(() => {
     (function handleResize() {
@@ -51,22 +52,19 @@ const Header = ({ click }) => {
           <div className="wrapper">
             <section className="nav__body">
               <div className="nav__logo">
-                <Link className="nav__logo-link" to="/">
+                <Link onClick={()=> setOpen(false)} className="nav__logo-link" to="/">
                   <img src={Logo} width="48" height="48" alt="brend logo" />
                 </Link>
               </div>
 
               <button
-                onClick={() => {
-                  handleActive();
-                  click();
-                }}
+                onClick={handleToggle}
                 aria-label="open/close mobile menu"
                 className="nav__toggle-btn"
               >
                 <svg
                   className={`nav__toggle-btn hamRotate nav__toggle-btn--anim ${
-                    isActive ? "active" : null
+                    show ? "active" : null
                   }`}
                   viewBox="0 0 100 100"
                   width="50"

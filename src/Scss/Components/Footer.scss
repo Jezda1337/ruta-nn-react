@@ -4,4 +4,8 @@
   display: grid;
   place-items: center;
   background-color: $darkBlue;
+
+  &__link {
+    color: inherit;
+  }
 }
