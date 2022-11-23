@@ -7,17 +7,13 @@ import { sliderHome } from "./SliderData";
 const Home = () => {
   const [counter, setCounter] = useState(0);
 
-  const images = () => {
-    if (counter >= sliderHome.length - 1) {
-      setCounter(0);
-    } else {
-      setCounter(counter + 1);
-    }
-  };
-
   useEffect(() => {
     let t = setTimeout(() => {
-      images();
+      if (counter >= sliderHome.length - 1) {
+        setCounter(0);
+      } else {
+        setCounter(counter + 1);
+      }
     }, 5000);
 
     return () => {
