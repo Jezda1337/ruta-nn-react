@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 //custom hook for outside click
 // import { useClickOutside } from "../hooks/useClickOutside/index";
-import { SocialMedia } from "../Components";
-
+import SocialMedia from "./SocialMedia";
 const SideNavigation = ({ show, handleOpen, setOpen }) => {
   //invoking custom hook
   // let domNode = useClickOutside(() => (show ? handleOpen() : setOpen(false)));
@@ -14,12 +13,6 @@ const SideNavigation = ({ show, handleOpen, setOpen }) => {
           <li className="sideNav__item">
             <Link onClick={handleOpen} className="sideNav__link" to="/">
               pocetna
-            </Link>
-          </li>
-
-          <li className="sideNav__item">
-            <Link onClick={handleOpen} className="sideNav__link" to="/about">
-              o nama
             </Link>
           </li>
 

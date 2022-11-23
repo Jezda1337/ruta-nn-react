@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState, Suspense, lazy } from "react";
+import { lazy, Suspense, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./Scss/index.scss";
 
@@ -7,7 +7,6 @@ import Loader from "./Components/Loader";
 const Header = lazy(() => import("./Components/Header"));
 const Home = lazy(() => import("./Components/Home"));
 const SideNavigation = lazy(() => import("./Components/SideNavigation"));
-const About = lazy(() => import("./Components/About"));
 const Form = lazy(() => import("./Components/Form"));
 const Footer = lazy(() => import("./Components/Footer"));
 const RentBike = lazy(() => import("./Components/RentBike"));
@@ -39,20 +38,11 @@ const App = () => {
             handleOpen={handleSideNav}
           />
           <main>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/about">
-                <About />
-              </Route>
-              <Route exact path="/form">
-                <Form />
-              </Route>
-              <Route exact path="/rent">
-                <RentBike />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/form" element={<Form />} />
+              <Route exact path="/rent" element={<RentBike />} />
+            </Routes>
           </main>
         </Router>
         <Footer color="white" />

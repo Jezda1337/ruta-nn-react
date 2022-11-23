@@ -4,12 +4,14 @@
   box-shadow: 0 rem(1) rem(5) $darkBlue;
 
   &__contact {
-    max-height: rem(35);
+    display: flex;
+    align-items: center;
+    min-height: rem(45);
     height: 100%;
     padding: rem(6) 0;
 
     @include breakpoint(tablet) {
-      max-height: rem(45);
+      max-height: rem(55);
     }
   }
   &__contact-body {
@@ -104,9 +106,9 @@
       margin-right: rem(35);
     }
 
-    &:last-child {
-      background-color: $white;
+    &:last-child a {
       padding: rem(3) rem(30);
+      background-color: $white;
       border-radius: rem(100);
       transition: 250ms ease;
       &:hover {

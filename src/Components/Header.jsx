@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../Assets/Asset 1.svg";
-import { SocialMedia } from "../Components";
-
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Logo from "../Assets/Asset1.svg";
+import SocialMedia from "./SocialMedia";
 
 const Header = ({ handleToggle, show, setOpen }) => {
   const [width, setWidth] = useState(0);
@@ -82,11 +81,6 @@ const Header = ({ handleToggle, show, setOpen }) => {
                 <li className="nav__item">
                   <Link className="nav__link" to="/">
                     pocetna
-                  </Link>
-                </li>
-                <li className="nav__item">
-                  <Link className="nav__link" to="/about">
-                    o nama
                   </Link>
                 </li>
 

@@ -1,17 +1,45 @@
-@use '../Global' as *;
+@use "../Global" as *;
 
 .socialMedia {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: rem(15);
 
   @include breakpoint(tablet) {
     margin-left: auto;
+    gap: rem(0);
   }
   &__item {
-    max-height: rem(24);
+    a {
+      display: block;
+      max-height: rem(24);
+    }
     &:nth-child(2) {
       margin: 0 rem(10);
+    }
+
+    &--group {
+      display: flex !important;
+      align-items: center;
+      color: white;
+      padding: rem(8) rem(30);
+      background-color: #6f40d3;
+      border-radius: 4px;
+      max-height: initial !important;
+
+      @include breakpoint(tablet) {
+        margin-left: rem(30);
+      }
+
+      &:hover {
+        background-color: #591fd5;
+      }
+
+      p {
+        margin-right: 10px;
+      }
     }
   }
 }
