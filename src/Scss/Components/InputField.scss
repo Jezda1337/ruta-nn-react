@@ -20,6 +20,11 @@
       background-color: $main;
       color: white;
       transform: scale(1.1);
+
+      &::placeholder {
+        transition: 300ms ease-in-out;
+        color: #fff;
+      }
     }
 
     @include breakpoint(tablet) {

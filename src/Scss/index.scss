@@ -55,23 +55,23 @@ img {
   border: rem(1.5) solid $main;
   background-color: transparent;
   display: block;
-  transition: background 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   @include breakpoint(tablet) {
     &:hover {
       background-color: $main;
       cursor: pointer;
+      color: $white;
     }
   }
 }
 
-#root {
-  min-height: 100vh;
-}
-
 main {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 145px);
+  @include breakpoint(tablet) {
+    min-height: calc(100vh - 157px);
+  }
 }
 
 @font-face {

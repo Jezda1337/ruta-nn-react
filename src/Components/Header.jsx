@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../Assets/Asset1.svg";
+import Logo from "../Assets/rutann_logo.png";
 import SocialMedia from "./SocialMedia";
 
 const Header = ({ handleToggle, show, setOpen }) => {
@@ -18,27 +18,25 @@ const Header = ({ handleToggle, show, setOpen }) => {
     <>
       <header className="header">
         <section className="header__contact">
-          <div className="wrapper">
-            <section className="header__contact-body">
-              <figure className="header__contact-info">
-                <FaPhoneAlt fill="#0a1931" size={24} />
-                <a href="tel:+381695230188">
-                  <span className="header__contact-text">+381 695 230 188</span>
-                </a>
-              </figure>
+          <section className="header__contact-body">
+            <figure className="header__contact-info">
+              <FaPhoneAlt fill="#0a1931" size={24} />
+              <a href="tel:+381695230188">
+                <span className="header__contact-text">+381 695 230 188</span>
+              </a>
+            </figure>
 
-              <figure className="header__contact-info">
-                <FaEnvelope fill="#0a1931" size={24} />
-                <a href="mailto:rutanndelivery@gmail.com" rel="noreferrer">
-                  <span className="header__contact-text">
-                    rutanndelivery@gmail.com
-                  </span>
-                </a>
-              </figure>
+            <figure className="header__contact-info">
+              <FaEnvelope fill="#0a1931" size={24} />
+              <a href="mailto:rutanndelivery@gmail.com" rel="noreferrer">
+                <span className="header__contact-text">
+                  rutanndelivery@gmail.com
+                </span>
+              </a>
+            </figure>
 
-              {width >= 768 ? <SocialMedia /> : ""}
-            </section>
-          </div>
+            {width >= 768 ? <SocialMedia /> : ""}
+          </section>
         </section>
         <nav className="nav">
           <div className="wrapper">
@@ -49,7 +47,7 @@ const Header = ({ handleToggle, show, setOpen }) => {
                   className="nav__logo-link"
                   to="/"
                 >
-                  <img src={Logo} width="48" height="48" alt="brend logo" />
+                  <img src={Logo} width="64" height="64" alt="brend logo" />
                 </Link>
               </div>
 
@@ -86,7 +84,7 @@ const Header = ({ handleToggle, show, setOpen }) => {
 
                 <li className="nav__item">
                   <Link className="nav__link" to="/rent">
-                    rent a bike
+                    rentiranje vozila
                   </Link>
                 </li>
 

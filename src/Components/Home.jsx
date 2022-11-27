@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import Logo from "../Assets/Logo.svg";
+import Logo from "../Assets/rutann_logo.png";
 
 import { useEffect, useState } from "react";
 import { sliderHome } from "./SliderData";
@@ -39,10 +39,10 @@ const Home = () => {
         <div className="wrapper">
           <section className="home__body">
             <figure className="home__logo">
-              {/* <img width="80" height="80" src={Logo} alt="Logo" /> */}
+              <img width="600" height="600" src={Logo} alt="Logo" />
             </figure>
 
-            <h1 className="home__title">Ruta NN</h1>
+            {/* <h1 className="home__title">Ruta NN</h1> */}
 
             <p className="home__text">
               Zelite dinamican posao i dobru zaradu? RutaNN je agencija koja
@@ -58,7 +58,7 @@ const Home = () => {
                 KONKURISI
               </Link>
               <Link to="/rent" className="btn home__btn">
-                RENT A BIKE
+                RENTIRANJE VOZILA
               </Link>
             </section>
           </section>

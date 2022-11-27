@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-//custom hook for outside click
-// import { useClickOutside } from "../hooks/useClickOutside/index";
 import SocialMedia from "./SocialMedia";
-const SideNavigation = ({ show, handleOpen, setOpen }) => {
-  //invoking custom hook
-  // let domNode = useClickOutside(() => (show ? handleOpen() : setOpen(false)));
 
+const SideNavigation = ({ show, handleOpen }) => {
   return (
     <>
-      <nav className={`sideNav ${show ? "openNav" : ""}`}>
+      <nav
+        className={`sideNav ${show ? "openNav" : ""}`}
+        style={{ minHeight: show ? "100vh" : "" }}
+      >
         <ul className={`sideNav__list ${show ? "open" : ""}`}>
           <li className="sideNav__item">
             <Link onClick={handleOpen} className="sideNav__link" to="/">
@@ -18,7 +17,7 @@ const SideNavigation = ({ show, handleOpen, setOpen }) => {
 
           <li className="sideNav__item">
             <Link onClick={handleOpen} className="sideNav__link" to="/rent">
-              rent a bike
+              rentiranje vozila
             </Link>
           </li>
 

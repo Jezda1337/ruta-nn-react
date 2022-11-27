@@ -3,7 +3,6 @@
 .home {
   height: 100%;
   padding: rem(40) 0;
-  // position: relative;
 
   &__bg {
     position: absolute;
@@ -35,16 +34,16 @@
     align-items: center;
 
     @include breakpoint(tablet) {
-      max-width: rem(450);
+      max-width: rem(650);
       margin: 0 auto;
     }
   }
 
   &__logo {
-    max-width: rem(80);
+    max-width: rem(300);
     width: 100%;
     @include breakpoint(tablet) {
-      max-width: rem(140);
+      max-width: rem(500);
     }
   }
 
@@ -68,6 +67,7 @@
     @include breakpoint(tablet) {
       margin: rem(24) 0 rem(66);
       font-size: rem(18);
+      max-width: rem(450);
     }
   }
 
@@ -84,7 +84,7 @@
   }
 
   &__btn {
-    max-width: rem(200);
+    max-width: rem(300);
     color: $white;
 
     &:first-child {

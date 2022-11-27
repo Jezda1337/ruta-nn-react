@@ -1,7 +1,7 @@
 import { SliderData } from "./SliderData";
 import Carousel from "react-multi-carousel";
-// import "../Scss/Components/Slider.scss";
-import 'react-multi-carousel/lib/styles.css';
+import "react-multi-carousel/lib/styles.css";
+
 const Slider = () => {
   const responsive = {
     mobile: {

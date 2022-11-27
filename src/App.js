@@ -1,15 +1,15 @@
 import { lazy, Suspense, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
 import "./Scss/index.scss";
 
+import RentBike from "./Components/RentBike";
+import Header from "./Components/Header";
+import Form from "./Components/Form";
 import Loader from "./Components/Loader";
-const Header = lazy(() => import("./Components/Header"));
-const Home = lazy(() => import("./Components/Home"));
+import Home from "./Components/Home";
+import Footer from "./Components/Footer";
+
 const SideNavigation = lazy(() => import("./Components/SideNavigation"));
-const Form = lazy(() => import("./Components/Form"));
-const Footer = lazy(() => import("./Components/Footer"));
-const RentBike = lazy(() => import("./Components/RentBike"));
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -32,11 +32,7 @@ const App = () => {
             show={isOpen}
             handleToggle={handleSideNav}
           />
-          <SideNavigation
-            setOpen={setOpen}
-            show={isOpen}
-            handleOpen={handleSideNav}
-          />
+          <SideNavigation show={isOpen} handleOpen={handleSideNav} />
           <main>
             <Routes>
               <Route exact path="/" element={<Home />} />

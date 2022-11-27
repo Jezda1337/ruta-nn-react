@@ -1,37 +1,7 @@
-@use '../Global' as *;
+@use "../Global" as *;
 
 .rent {
-  &__body {
-    margin: rem(25) 0;
-
-    @include breakpoint(tablet) {
-      margin: rem(50) 0;
-    }
-  }
-  &__title {
-    font-size: rem(18);
-    font-weight: 600;
-
-    @include breakpoint(tablet) {
-      font-size: rem(36);
-    }
-  }
-
-  &__text {
-    font-size: rem(14);
-    line-height: rem(25);
-
-    @include breakpoint(tablet) {
-      font-size: rem(16);
-      line-height: rem(30);
-    }
-
-    &:nth-child(2) {
-      margin: rem(25) 0;
-
-      @include breakpoint(tablet) {
-        margin: rem(35) 0;
-      }
-    }
-  }
+  // background: url("../../Assets/images/rent.webp") center center / contain
+  //   no-repeat;
+  // height: calc();
 }
