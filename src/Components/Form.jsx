@@ -45,7 +45,7 @@ const Form = () => {
 				<div className="wrapper">
 					<section className="form__body">
 						<h2 className="form__title">
-							Prijavi se vec danas i postani deo <span>tima</span>.
+							Prijavi se i postani deo <span>tima</span> vec danas.
 						</h2>
 
 						<form onSubmit={handleSubmit} className="form__fields">
