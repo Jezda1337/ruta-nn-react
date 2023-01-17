@@ -41,7 +41,19 @@
 
   &__link {
     color: $darkBlue;
-    font-size: rem(36);
+    // font-size: rem(36);
+    font-size: rem(24);
+    border-radius: 100px;
+    padding: 4px 30px;
+    border: 1px solid transparent;
+
+    &--green {
+      border-color: #a8eb12;
+    }
+
+    &--blue {
+      border-color: #0092ff;
+    }
   }
 
   &__btn {
@@ -56,6 +68,19 @@
     color: $darkBlue;
     text-align: center;
     font-weight: bold;
+  }
+
+  &__papersButtons {
+    display: flex;
+    margin-top: rem(30);
+    justify-content: space-evenly;
+  }
+
+  &__paperButton {
+    background: transparent;
+    border: 1px solid $main;
+    border-radius: 6px;
+    padding: 4px 10px;
   }
 }
 
