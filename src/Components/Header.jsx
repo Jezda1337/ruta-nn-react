@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Logo from "../Assets/rutann_logo.png";
 import SocialMedia from "./SocialMedia";
 
+import cenovnik from "../Assets/files/cenovnik.pdf";
+import opsti_uslovi from "../Assets/files/opsti_uslovi.pdf";
+
 const Header = ({ handleToggle, show, setOpen }) => {
   const [width, setWidth] = useState(0);
 
@@ -86,6 +89,22 @@ const Header = ({ handleToggle, show, setOpen }) => {
                   <Link className="nav__link" to="/rent">
                     rentiranje vozila
                   </Link>
+                </li>
+
+                <li className="nav__item nav__item--nested">
+                  <p className="nav__link">postanske usluge</p>
+                  <ul className="nested__list">
+                    <li className="nested__item">
+                      <a className="nested__link" href={cenovnik}>
+                        Cenovnik
+                      </a>
+                    </li>
+                    <li className="nested__item">
+                      <a className="nested__link" href={opsti_uslovi}>
+                        Opsti uslovi
+                      </a>
+                    </li>
+                  </ul>
                 </li>
 
                 <li className="nav__item">

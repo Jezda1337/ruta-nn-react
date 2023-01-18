@@ -39,7 +39,7 @@ const SideNavigation = ({ show, handleOpen }) => {
 
           <li className="sideNav__papersButtons">
             <a className="sideNav__paperButton" href={opsti_uslovi}>
-              Opsti uslovi rada
+              Opsti uslovi postanskih usluga
             </a>
             <a className="sideNav__paperButton" href={cenovnik}>
               Cenovnik
