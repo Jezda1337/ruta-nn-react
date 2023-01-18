@@ -21,25 +21,27 @@ const Header = ({ handleToggle, show, setOpen }) => {
     <>
       <header className="header">
         <section className="header__contact">
-          <section className="header__contact-body">
-            <figure className="header__contact-info">
-              <FaPhoneAlt fill="#0a1931" size={24} />
-              <a href="tel:+381695230188">
-                <span className="header__contact-text">+381 695 230 188</span>
-              </a>
-            </figure>
+          <div className="wrapper">
+            <section className="header__contact-body">
+              <figure className="header__contact-info">
+                <FaPhoneAlt fill="#0a1931" size={24} />
+                <a href="tel:+381695230188">
+                  <span className="header__contact-text">+381 695 230 188</span>
+                </a>
+              </figure>
 
-            <figure className="header__contact-info">
-              <FaEnvelope fill="#0a1931" size={24} />
-              <a href="mailto:rutanndelivery@gmail.com" rel="noreferrer">
-                <span className="header__contact-text">
-                  rutanndelivery@gmail.com
-                </span>
-              </a>
-            </figure>
+              <figure className="header__contact-info">
+                <FaEnvelope fill="#0a1931" size={24} />
+                <a href="mailto:rutanndelivery@gmail.com" rel="noreferrer">
+                  <span className="header__contact-text">
+                    rutanndelivery@gmail.com
+                  </span>
+                </a>
+              </figure>
 
-            {width >= 768 ? <SocialMedia /> : ""}
-          </section>
+              {width >= 768 ? <SocialMedia /> : ""}
+            </section>
+          </div>
         </section>
         <nav className="nav">
           <div className="wrapper">
