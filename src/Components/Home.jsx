@@ -3,7 +3,7 @@ import Logo from "../Assets/rutann_logo.png";
 
 import { useEffect, useState } from "react";
 import { sliderHome } from "./SliderData";
-// test
+
 const Home = () => {
   const [counter, setCounter] = useState(0);
 

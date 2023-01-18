@@ -72,6 +72,8 @@
 
   &__papersButtons {
     display: flex;
+    flex-direction: column;
+    gap: rem(20);
     margin-top: rem(30);
     justify-content: space-evenly;
   }
@@ -80,7 +82,7 @@
     background: transparent;
     border: 1px solid $main;
     border-radius: 6px;
-    padding: 4px 10px;
+    padding: rem(8);
   }
 }
 
