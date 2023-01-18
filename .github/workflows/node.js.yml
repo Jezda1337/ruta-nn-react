@@ -25,6 +25,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - name: clear npm cache
+        run: rm -r ~/.npm
       - name: run npm install
         run: npm install --fetch-retries=0
       - name: run npm build if exists
